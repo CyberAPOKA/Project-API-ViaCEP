@@ -163,7 +163,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Canducci\Cep\Providers\CepServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -191,6 +191,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'Cep' => Canducci\Cep\Facades\Cep::class,
+        'Endereco' => Canducci\Cep\Facades\Endereco::class,
         // ...
     ])->toArray(),
 
